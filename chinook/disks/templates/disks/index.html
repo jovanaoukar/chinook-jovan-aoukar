@@ -4,7 +4,7 @@
         {% if albums_list %}
             <ul>
             {% for album in albums_list %}
-                <li>{{ album.title }}</li>
+                <li><a href="/disks/{{ album.id }}/">{{ album.title }}</a></li>
             {% endfor %}
             </ul>
         {% else %}

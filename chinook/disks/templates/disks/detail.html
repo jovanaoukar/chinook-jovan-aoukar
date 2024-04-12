@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>{{ album.title }}</h2>
+        {% if album.track_set.all %}
+            <table>
+            {% for track in album.track_set.all %}
+                <tr>
+                  <td>{{track.name}}</td>
+                  <td>{{track.composer}}</td>
+                  <td>{{track.milliseconds}}</td>
+                  <td>{{track.unitPrice}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        {% else %}
+            <p>No tracks are available.</p>
+        {% endif %}
+    </body>
+</html>
