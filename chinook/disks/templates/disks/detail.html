@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
     <body>
+        {% load static %}
+
+        <link rel="stylesheet" href="{% static 'disks/style.css' %}">
+
         <h2>{{ album.title }}</h2>
         {% if album.track_set.all %}
             <table>
-            {% for track in album.track_set.all %}
+                <tr>
+                    <th>Track Title</th>
+                    <th>Composer</th>
+                    <th>Duration</th>
+                    <th>Unit Price</th>
+                </tr>
+                {% for track in album.track_set.all %}
                 <tr>
                   <td>{{track.name}}</td>
                   <td>{{track.composer}}</td>
