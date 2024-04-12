@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% if albums_list %}
+            <ul>
+            {% for album in albums_list %}
+                <li>{{ album.title }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No albums are available.</p>
+        {% endif %}
+    </body>
+</html>
